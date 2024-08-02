@@ -9,7 +9,7 @@ public class frog_damage : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            boss_health.BossTakeDamage(50); 
+            boss_health.BossTakeDamage(30); 
         }
     }
 }

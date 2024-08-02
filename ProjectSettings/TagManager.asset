@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wave
   - Boss
+  - spawner
   layers:
   - Default
   - TransparentFX
