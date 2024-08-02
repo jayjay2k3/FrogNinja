@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6890355860816670623}
   - component: {fileID: 1756978873232424356}
   - component: {fileID: 8688403001837456459}
+  - component: {fileID: -5606406616992624897}
   m_Layer: 0
   m_Name: fk-fireball
   m_TagString: Untagged
@@ -123,3 +124,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &-5606406616992624897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945112985794569310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514a34ca34f4e8041931eecf1aed8013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBallDestroyed: {fileID: 2312102699555575371, guid: 0b423862f2a24714d85d03367b52df85, type: 3}
