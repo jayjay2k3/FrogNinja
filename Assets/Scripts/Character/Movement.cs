@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
+        
         Move();
         WallSlide();
         WallJump();
@@ -49,8 +49,15 @@ public class Movement : MonoBehaviour
 
     bool IsGround()
     {
-       
-        return Physics2D.OverlapCircle(groundCheck.position,0.3f,groundLayer);
+       if(Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer) || Physics2D.OverlapCircle(groundCheck.position,0.2f,wallLayer))
+       {
+            return true;
+       }
+       else
+       {
+        return false;
+       }
+         
     }
 
     void WallJump()
@@ -79,7 +86,7 @@ public class Movement : MonoBehaviour
     }
     void WallSlide()
     {
-        if(!IsGround() && IsWall() && horizontal!=0)
+        if(!IsGround() && IsWall() && horizontal!=0 )
         {
             isWallSliding=true;
             
@@ -101,10 +108,8 @@ public class Movement : MonoBehaviour
         
         if(!isWallJumping)
         {
-            
-            {
+                horizontal = Input.GetAxis("Horizontal");
                 rb.velocity=new Vector2(horizontal*speed,rb.velocity.y);
-            }
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && IsGround() )
