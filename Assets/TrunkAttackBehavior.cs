@@ -7,16 +7,15 @@ public class TrunkAttackBehavior: MonoBehaviour
     Vector2 bulletSpawn;
     Vector2 flippedBulletSpawn;
     public GameObject bulletPrefab;
-    float timer = 0;
+
     const float RELOAD_TIME = 0.55f;
     private void Update()
     {
         gameObject.GetComponent<SpriteRenderer>().flipX = GameObject.FindWithTag("Player").GetComponent<Transform>().position.x > gameObject.transform.position.x;
-        timer += Time.deltaTime;  
     }
     void BulletPosition()
     {
-        bulletSpawn = new Vector2(gameObject.transform.position.x + 1f, gameObject.transform.position.y);
+        bulletSpawn = new Vector2(gameObject.transform.position.x - 1f, gameObject.transform.position.y);
     }
     void BulletFlippedPosiotion()
     {
@@ -27,7 +26,7 @@ public class TrunkAttackBehavior: MonoBehaviour
     void BulletAttack()
     {
         
-            timer = 0;
+            
             BulletPosition();
             BulletFlippedPosiotion();
             if (gameObject.GetComponent<SpriteRenderer>().flipX == false)
