@@ -7,6 +7,7 @@ TagManager:
   - Wave
   - Boss
   - spawner
+  - Trunk Bullet
   layers:
   - Default
   - TransparentFX
