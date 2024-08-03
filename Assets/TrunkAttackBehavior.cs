@@ -16,7 +16,7 @@ public class TrunkAttackBehavior: MonoBehaviour
     }
     void BulletPosition()
     {
-        bulletSpawn = new Vector2(gameObject.transform.position.x + 2f, gameObject.transform.position.y);
+        bulletSpawn = new Vector2(gameObject.transform.position.x + 1f, gameObject.transform.position.y);
     }
     void BulletFlippedPosiotion()
     {
