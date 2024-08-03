@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -86,10 +85,14 @@ public class Movement : MonoBehaviour
     }
     void WallSlide()
     {
-        if(!IsGround() && IsWall() && horizontal!=0 )
+        if(isWallJumping)
+        {
+            isDoubleJump=false;
+        }
+
+        if(!IsGround() && IsWall() && horizontal!=0 && rb.velocity.y<0)
         {
             isWallSliding=true;
-            
             rb.velocity=new Vector2(rb.velocity.x,-3f);
             
         }
@@ -97,31 +100,41 @@ public class Movement : MonoBehaviour
         {
             isWallSliding=false;
         }
-
-        if(rb.velocity.y<0)
-        {
-            isDoubleJump=false;
-        }
     }
     void Move()
     {
-        
-        if(!isWallJumping)
+        if(IsWall() && rb.velocity.y>0 )
         {
-                horizontal = Input.GetAxis("Horizontal");
+            rb.velocity=new Vector2(Mathf.Clamp(rb.velocity.x,-0.001f,0.001f),rb.velocity.y);
+            isDoubleJump=false;
+        }
+        else if(!isWallJumping)
+        {
+                horizontal = Input.GetAxisRaw("Horizontal");
                 rb.velocity=new Vector2(horizontal*speed,rb.velocity.y);
         }
+        
+        
 
-        if(Input.GetKeyDown(KeyCode.Space) && IsGround() )
-            {
-                rb.velocity=new Vector2(rb.velocity.x,jumpHeight);
-                isDoubleJump=false;
-            }
+        if(!isWallSliding)
+        {
+            if(Input.GetKeyDown(KeyCode.Space) && IsGround() )
+                {
+                    
+                        rb.velocity=new Vector2(rb.velocity.x,jumpHeight);
+                        isDoubleJump=false;
+                    
+                    
+                }
             else if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y !=0 && !isDoubleJump)
-            {
-                rb.velocity=new Vector2(rb.velocity.x,jumpHeight/1.2f);
-                isDoubleJump=true;
-            }
+                {
+                    rb.velocity=new Vector2(rb.velocity.x,jumpHeight/1.2f);
+                    isDoubleJump=true;
+                }
+
+                
+        }
+       
            
         
 

@@ -32,7 +32,7 @@ public class Animate : MonoBehaviour
         animator.SetFloat("Speed",Mathf.Abs(rb.velocity.x));
         if(rb.velocity.x!=0)
         {
-            transform.localScale= rb.velocity.x>0 ? new Vector2(1,1) : new Vector2(-1,1);
+            transform.localScale= rb.velocity.x>0 ? new Vector3(1,1,1) : new Vector3(-1,1,1);
         }
         
         
