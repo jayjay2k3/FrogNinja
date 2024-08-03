@@ -5,16 +5,27 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    public GameObject wave;
+    public GameObject wavePrefab;
     public GameObject fireBall;
     public Transform hitCircle;
     [SerializeField] float attackRange;
     public List<Transform> Spawners = new List<Transform>();
-    public int[] SpawnIndex = { 0, 1, 2, 3, 4, 5, 6, 7 }; 
+    public int[] SpawnIndex = { 0, 1, 2, 3, 4, 5, 6, 7 };
+    SpriteRenderer boss;
+    bool waveExist = false;
+    Vector2 wavePosition;
+    Vector2 flippedWavePosition;
     private void Awake()
     {
         Spawners = GameObject.FindGameObjectsWithTag("spawner").ToList().Select(x => x.transform).ToList();
-        Shuffle(SpawnIndex); 
+        Shuffle(SpawnIndex);
+        boss = gameObject.GetComponent<SpriteRenderer>();
+        WavePosition();
+        WaveFlippedPosiotion();
+    }
+    private void Update()
+    {
+        DestroyOutRangeWave();
     }
     void BasicAttack()
     {
@@ -27,14 +38,28 @@ public class BossAttack : MonoBehaviour
     }
     void WaveAttack()
     {
-        
+        WavePosition();
+        WaveFlippedPosiotion();
+        if (boss.flipX == false && waveExist == false)
+        {
+            GameObject cloneWave = Instantiate(wavePrefab, wavePosition, Quaternion.identity);
+            cloneWave.name = "clone";
+            waveExist = true;
+            cloneWave.GetComponent<Rigidbody2D>().velocity = new Vector2(10f, 0f);
+        }
+        else if (boss.flipX == true && waveExist == false)
+        {
+            waveExist = true;
+            GameObject cloneWave = Instantiate(wavePrefab, flippedWavePosition, Quaternion.identity);
+            cloneWave.name = "clone";
+            cloneWave.GetComponent<Rigidbody2D>().velocity = new Vector2(-10f, 0f);
+        }
     }
     void FireBallAttack()
     {
         Shuffle(SpawnIndex);
         foreach (var index in SpawnIndex)
         {
-            wait_a_bit(); //0.2s
             Instantiate(fireBall, Spawners[index].position, Quaternion.identity);
         }
     }
@@ -53,12 +78,22 @@ public class BossAttack : MonoBehaviour
             SpawnIndex[j] = temp; 
         }
     }
-    void wait_a_bit()
+    void WavePosition()
     {
-        StartCoroutine( wait());
+        wavePosition = new Vector2(boss.transform.position.x + 3f, boss.transform.position.y);
     }
-    IEnumerator wait()
+    void WaveFlippedPosiotion()
     {
-        yield return new WaitForSeconds(0.5f);
+        float newX = boss.transform.position.x * 2 - wavePosition.x;
+        flippedWavePosition = new Vector2(newX, boss.transform.position.y);
+    }
+    void DestroyOutRangeWave()
+    {
+        GameObject waveDetect = GameObject.FindWithTag("Wave");
+        if (waveDetect != null && (waveDetect.transform.position.x >= 13f || waveDetect.transform.position.x <= -20f))
+        {
+            Destroy(waveDetect);
+            waveExist = false;
+        }
     }
 }

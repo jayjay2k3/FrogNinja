@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public Animator animator; 
     public float BOSS_HEALTH = 500;
     public Slider health_bar;
-    float hundred = 0; 
+    float hundred = 0;
     public void BossTakeDamage(float dmg)
     {
         health_bar.value -= dmg;
@@ -23,13 +23,14 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if(BOSS_HEALTH <= 0)
+        if (BOSS_HEALTH <= 0)
         {
-            animator.SetTrigger("Dead");  
+            animator.SetBool("isDead", true);
+            gameObject.GetComponent<BossFlip>().enabled = false;
         }
         else if(hundred >= 100)
         {
-            hundred = 0;
+            hundred -= 100;
             animator.SetTrigger("Roll"); 
         }
     }
