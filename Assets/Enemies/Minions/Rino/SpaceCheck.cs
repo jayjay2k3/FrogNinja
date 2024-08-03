@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpaceCheck : MonoBehaviour
 {
-    public float range = 8;
+    public float range = 5f;
     public Transform rhino; 
     public Transform player;
     public Animator anim; 

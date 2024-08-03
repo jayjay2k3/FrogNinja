@@ -7,7 +7,7 @@ public class Rhino_run : StateMachineBehaviour
     Rigidbody2D rhino;
     Transform player;
     public float speed = 3f;
-    public float OutRange = 8f;
+    public float OutRange = 5f;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         rhino = animator.GetComponent<Rigidbody2D>();
