@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
     public bool isDoubleJump=false;
 
     public bool isWallSliding=false;
+    public bool isDashing=false;
+    public bool dashAble=true;
     bool isWallJumping=false;
     float horizontal;
     [SerializeField] Transform groundCheck;
@@ -20,13 +22,17 @@ public class Movement : MonoBehaviour
     [SerializeField] float wallJumpDuration;
 
     [SerializeField] float jumpForce;
+    [SerializeField] float dashDuration;
+    [SerializeField] float dashForce;
 
     public bool isWall,isGround;
+    TrailRenderer trailRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
+        trailRenderer=GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -36,6 +42,7 @@ public class Movement : MonoBehaviour
         Move();
         WallSlide();
         WallJump();
+        Dash();
         isWall=IsWall();
         isGround=IsGround();
     }
@@ -90,10 +97,11 @@ public class Movement : MonoBehaviour
             isDoubleJump=false;
         }
 
-        if(!IsGround() && IsWall() && horizontal!=0 && rb.velocity.y<0)
+        if(!IsGround() && IsWall() && horizontal!=0 && rb.velocity.y<=0)
         {
             isWallSliding=true;
             rb.velocity=new Vector2(rb.velocity.x,-3f);
+            dashAble=true;
             
         }
         else
@@ -101,12 +109,47 @@ public class Movement : MonoBehaviour
             isWallSliding=false;
         }
     }
+
+    void Dash()
+    {
+        //Nếu dashAble thì có thể nhấn Z để lướt
+        if(dashAble)
+        {
+            if(Input.GetKeyDown(KeyCode.Z))
+            {
+                isDashing=true;
+                dashAble=false;
+            }   
+        }
+
+        //Khi đang lướt sẽ invoke method stopdash sau 1 khoảng thời gian
+        if(isDashing)
+        { 
+            rb.velocity= new Vector2(transform.localScale.x*dashForce,0);   
+            trailRenderer.enabled=true;
+            Invoke("StopDash",dashDuration);
+            
+        }
+
+        //Khi chạm đất mới có thể lướt lại lần nữa
+        if(IsGround())
+        {
+            dashAble=true;
+        }
+        
+        
+    }
+
+    void StopDash()
+    {
+        isDashing=false;
+        trailRenderer.enabled=false;
+    }
     void Move()
     {
         if(IsWall() && rb.velocity.y>0 )
         {
             rb.velocity=new Vector2(Mathf.Clamp(rb.velocity.x,-0.001f,0.001f),rb.velocity.y);
-            isDoubleJump=false;
         }
         else if(!isWallJumping)
         {
