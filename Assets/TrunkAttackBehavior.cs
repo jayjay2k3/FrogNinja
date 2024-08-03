@@ -26,8 +26,7 @@ public class TrunkAttackBehavior: MonoBehaviour
 
     void BulletAttack()
     {
-        if(timer >= RELOAD_TIME)
-        {
+        
             timer = 0;
             BulletPosition();
             BulletFlippedPosiotion();
@@ -45,6 +44,6 @@ public class TrunkAttackBehavior: MonoBehaviour
                 cloneWave.name = "clone";
                 cloneWave.GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 0f);
             }
-        }
+        
     }
 }
