@@ -5,19 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wave
-  - Boss
-  - spawner
-  - Trunk Bullet
+  - Trap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Wall
+  - 
   - Water
   - UI
   - Ground
-  - Boss
-  - Player
+  - 
+  - 
   - 
   - 
   - 

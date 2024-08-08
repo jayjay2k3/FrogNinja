@@ -8,8 +8,6 @@ public class Animate : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer sprite;
 
-    bool isDoubleJump;
-    bool isWallSliding;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +22,6 @@ public class Animate : MonoBehaviour
     {      
         Walk();
         Jump();
-        WallSliding();
     }
 
     void Walk()
@@ -33,23 +30,12 @@ public class Animate : MonoBehaviour
         if(rb.velocity.x!=0)
         {
             transform.localScale= rb.velocity.x>0 ? new Vector3(1,1,1) : new Vector3(-1,1,1);
-        }
-        
-        
+        }   
     }
 
     void Jump()
     {
-       animator.SetFloat("Jump",rb.velocity.y);
-        isDoubleJump=GetComponent<Movement>().isDoubleJump;
-        animator.SetBool("DoubleJump",isDoubleJump);
-
-        
+        animator.SetFloat("Jump",rb.velocity.y);
     }
-
-    void WallSliding()
-    {
-        isWallSliding= GetComponent<Movement>().isWallSliding;
-        animator.SetBool("WallJump",isWallSliding);
-    }
+    
 }
