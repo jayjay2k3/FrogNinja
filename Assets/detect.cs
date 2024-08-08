@@ -8,12 +8,12 @@ public class detect : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {       
-        if (collision.gameObject.name == "gate")
-        {
-            
+        if (collision.gameObject.tag == "Gate")
+        {          
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Debug.Log(1);
         }
-        if(collision.gameObject.name == "trap")
+        if(collision.gameObject.tag == "Trap")
         {
             
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

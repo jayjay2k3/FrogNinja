@@ -8,13 +8,8 @@ public class Movement : MonoBehaviour
     public float jumpHeight;
     Rigidbody2D rb;
     float horizontal;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] LayerMask groundLayer;
     [SerializeField] bool canMove;
-    [SerializeField] bool canJump;
-
-    public bool isWall,isGround;
-    
+    [SerializeField] bool canJump;    
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +23,8 @@ public class Movement : MonoBehaviour
     {
        Move();
         
-        
-        isGround=IsGround();
+     
     }
-
-   
-
-    bool IsGround()
-    {
-      return Physics2D.OverlapCircle(groundCheck.position,0.25f,groundLayer);
-       
-         
-    }
-
     
     void Move()
     {
@@ -52,7 +36,7 @@ public class Movement : MonoBehaviour
            
         if(canJump)
         {
-            if(Input.GetKeyDown(KeyCode.Space) && IsGround() )
+            if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y==0)
             {
                 rb.velocity=new Vector2(rb.velocity.x,jumpHeight); 
             }

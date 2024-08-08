@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 1.unity
+    path: Assets/Scenes/LevelScene/Room 1.unity
     guid: 07a5bbfc8b76e4449b95bbc3681b33ce
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 2.unity
+    path: Assets/Scenes/LevelScene/Room 2.unity
     guid: a26e4c1cbb1776c4ebefbb29410826d4
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 3.unity
+    path: Assets/Scenes/LevelScene/Room 3.unity
     guid: 6aff784958451c343abc5515a5f44b93
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 4.unity
+    path: Assets/Scenes/LevelScene/Room 4.unity
     guid: 71d0c0e631623484db944a5cd3e876ec
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 5.unity
+    path: Assets/Scenes/LevelScene/Room 5.unity
     guid: 9f4c59fa3299e8b40a2afd08fc82cfee
   - enabled: 1
-    path: Assets/Scenes/ReversalRoom/Room 6.unity
+    path: Assets/Scenes/LevelScene/Room 6.unity
     guid: b6998b92d4006de4f8fcfa990fc94c53
   m_configObjects: {}
