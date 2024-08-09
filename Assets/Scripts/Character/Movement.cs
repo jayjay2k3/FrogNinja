@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public float speed;
     public float jumpHeight;
+    public float boundForce;
     Rigidbody2D rb;
     float horizontal;
     [SerializeField] bool canMove;
@@ -47,5 +48,11 @@ public class Movement : MonoBehaviour
             }
         }
     }
-       
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Bounce")
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundForce), ForceMode2D.Impulse);
+    }
 }

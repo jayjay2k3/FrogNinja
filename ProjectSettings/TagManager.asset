@@ -7,6 +7,8 @@ TagManager:
   - Wave
   - Trap
   - Gate
+  - Bounce
+  - player
   layers:
   - Default
   - TransparentFX

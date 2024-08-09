@@ -5,21 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/LevelScene/Room 1.unity
-    guid: a829c589c91b9494d81204962a609759
-  - enabled: 1
-    path: Assets/Scenes/LevelScene/Room 2.unity
-    guid: c1771acc8903df94c9ed6de3c1722d2f
-  - enabled: 1
-    path: Assets/Scenes/LevelScene/Room 3.unity
-    guid: 43e00a936af6f6646936bfb91ad6790d
-  - enabled: 1
-    path: Assets/Scenes/LevelScene/Room 4.unity
-    guid: 7d4dfeab833d83448adb594386fe980a
-  - enabled: 1
-    path: Assets/Scenes/LevelScene/Room 5.unity
-    guid: 27481867180ca43418b8c44e39e6941d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/LevelScene/Room 6.unity
     guid: 7a0e3007259be8941a211d9adbb5e19e
@@ -80,4 +80,61 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room A.unity
+    guid: 506e71f1f8e123345bc0f1a607a53676
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room B.unity
+    guid: a5cd7318edf9a3c4c9e6f320841cb754
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room C.unity
+    guid: 09e7692e6f2a511419e8275e030ae6c1
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room D.unity
+    guid: f6b56ec6a1666234eae066adb0573d0d
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room E.unity
+    guid: 60dfdd330a640364aa84a01764c9bda4
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room F.unity
+    guid: b49bd3d90b14392449ac9ef535cd5d8e
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room G.unity
+    guid: 9517109c2d151d34ba540ac8674b0a82
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room H.unity
+    guid: b81a6d3f9492d8b439919da841d163bf
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room I.unity
+    guid: 7f8d6ffec0a489e4386c1f8efd6cea8c
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room J.unity
+    guid: 945242cb454549041a9d45adb43c32d3
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room K.unity
+    guid: af87cb03ee6890849ac8af6b0f067c8e
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room L.unity
+    guid: bcbfc888c070819429c1cfeafc8adca1
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room M.unity
+    guid: d46bd6205d0900c44bf5d0b9bc654b70
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room N.unity
+    guid: f208e71c640ee0646a47cdc18e5581fd
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room O.unity
+    guid: de47b612eefe3694392911509daf88ab
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room P.unity
+    guid: 06649af5b08b41647a76b4944ffa6b5a
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room Q.unity
+    guid: d46a7e338cc4fa042b9eb43c4194d244
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room R.unity
+    guid: 6a658a0619c51db4d8dc314f975973f0
+  - enabled: 1
+    path: Assets/Scenes/LevelScene/Room S.unity
+    guid: 27c4d2eeb35c0674f8238c9ff44d4206
   m_configObjects: {}
