@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6339184661016417830, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_Mass
-      value: 0.6228955
+      value: 0.7778557
       objectReference: {fileID: 0}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_RootOrder
@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Mass
-      value: 2.8572705
+      value: 2.4719548
       objectReference: {fileID: 0}
     - target: {fileID: 8135964671870021249, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Size.y
