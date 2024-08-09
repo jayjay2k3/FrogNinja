@@ -1390,6 +1390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trap
       objectReference: {fileID: 0}
+    - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4372225528428140310, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_RootOrder
       value: 1
