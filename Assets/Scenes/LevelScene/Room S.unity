@@ -278,6 +278,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
+      propertyPath: m_Mass
+      value: 2.4719548
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8347002048246907527, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Name
       value: gate
@@ -1087,7 +1095,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -1108,9 +1116,53 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1035990270}
+    m_ColliderPaths:
+    - - X: 90000000
+        Y: 50000000
+      - X: -90000000
+        Y: 50000000
+      - X: -90000000
+        Y: -50000000
+      - X: 90000000
+        Y: -50000000
+    - - X: -80000000
+        Y: -40000000
+      - X: -80000000
+        Y: -20000000
+      - X: -50000000
+        Y: -20000000
+      - X: -50000000
+        Y: -10000000
+      - X: -80000000
+        Y: -10000000
+      - X: -80000000
+        Y: 40000000
+      - X: 80000000
+        Y: 40000000
+      - X: 80000000
+        Y: -20000000
+      - X: 40000000
+        Y: -20000000
+      - X: 40000000
+        Y: -40000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 8.99997, y: -5}
+      - {x: 8.99997, y: 5}
+      - {x: -9, y: 4.999971}
+      - {x: -8.99997, y: -5}
+    - - {x: 4, y: -3.9999704}
+      - {x: -8, y: -3.9999704}
+      - {x: -7.9999704, y: -2}
+      - {x: -5, y: -1.9999708}
+      - {x: -5.000029, y: -1}
+      - {x: -8, y: -0.9999706}
+      - {x: -7.9999704, y: 4}
+      - {x: 8, y: 3.9999704}
+      - {x: 7.9999704, y: -2}
+      - {x: 4, y: -2.0000293}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1035990272
@@ -1262,7 +1314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4372225528428140310, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_RootOrder
@@ -1376,7 +1432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6339184661016417830, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_CollisionDetection
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_RootOrder
@@ -1451,7 +1507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4372225528428140310, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_RootOrder
@@ -1520,7 +1580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879480785770171684, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4372225528428140310, guid: 1b637fdba2aa9744c83bb6b382e3d7d4, type: 3}
       propertyPath: m_RootOrder

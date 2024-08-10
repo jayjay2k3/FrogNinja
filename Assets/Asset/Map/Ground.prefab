@@ -122,16 +122,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 4294967295
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -1, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -276,8 +266,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 82f0b47fcfccfbe499005bd4d2f325d4, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: f9dd7f30e573915468c02a05fbe127a5, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: d3f298666b7db5844963c060d99b2e9e, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 4641209f5ceb99148a6c7331320794b1, type: 2}
   - m_RefCount: 1
@@ -328,7 +318,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 396089297, guid: 413986c4a668c374d8de72a47621b531, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 16
+  - m_RefCount: 15
     m_Data:
       e00: 1
       e01: 0
@@ -365,13 +355,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 17
+  - m_RefCount: 16
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -2, y: -3, z: 0}
-  m_Size: {x: 4, y: 6, z: 1}
+  m_Origin: {x: -3, y: -3, z: 0}
+  m_Size: {x: 5, y: 6, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -579,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Mass
-      value: 2.8609693
+      value: 2.4719548
       objectReference: {fileID: 0}
     - target: {fileID: 8347002048246907527, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Name
@@ -798,7 +788,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6095933430687610696, guid: 6903c24877f485f40adbd6b3471dcdc6, type: 3}
   m_PrefabInstance: {fileID: 8512793703695988458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2567386785683611365
+--- !u!114 &8484602799768337612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

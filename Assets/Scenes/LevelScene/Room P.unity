@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.8911925
       objectReference: {fileID: 0}
+    - target: {fileID: 6339184661016417830, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: a46e2f3672dbe5d47bd42821c5c26720, type: 2}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -261,11 +265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Mass
-      value: 2.4719548
+      value: 2.4719553
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_BodyType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_GravityScale
@@ -971,7 +975,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1035990266}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a46e2f3672dbe5d47bd42821c5c26720, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1026,7 +1030,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a46e2f3672dbe5d47bd42821c5c26720, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1043,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f3b1b51c121dd4b84677e16bafb8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0.2
+  rotateSpeed: 0.1
 --- !u!1 &1166225505
 GameObject:
   m_ObjectHideFlags: 0

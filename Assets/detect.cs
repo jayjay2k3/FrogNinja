@@ -11,7 +11,6 @@ public class detect : MonoBehaviour
         if (collision.gameObject.tag == "Gate")
         {          
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Debug.Log(1);
         }
         if(collision.gameObject.tag == "Trap")
         {
