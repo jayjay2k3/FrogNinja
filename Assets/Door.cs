@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     public SpriteRenderer Renderer;
     public Sprite Sprite;
     private void Start() {
-        Key=GameObject.Find("Key").GetComponent<Key>();
+       
     }
     private void Update()
     {

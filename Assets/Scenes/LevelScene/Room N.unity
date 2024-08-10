@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.33
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_LocalPosition.z
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 665211565143359480, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.05
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 665211565143359480, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_LocalPosition.z
@@ -270,6 +270,10 @@ PrefabInstance:
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_Mass
       value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3828228808778553010, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
       propertyPath: m_UseAutoMass
@@ -316,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035990266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -967,7 +971,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -988,35 +992,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1035990270}
-    m_ColliderPaths:
-    - - X: 90000000
-        Y: 50000000
-      - X: -90000000
-        Y: 50000000
-      - X: -90000000
-        Y: -50000000
-      - X: 90000000
-        Y: -50000000
-    - - X: -80000000
-        Y: -40000000
-      - X: -80000000
-        Y: 40000000
-      - X: 80000000
-        Y: 40000000
-      - X: 80000000
-        Y: -40000000
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 8.99997, y: -5}
-      - {x: 8.99997, y: 5}
-      - {x: -9, y: 4.999971}
-      - {x: -8.99997, y: -5}
-    - - {x: 8, y: -3.9999704}
-      - {x: -8, y: -3.9999704}
-      - {x: -7.9999704, y: 4}
-      - {x: 8, y: 3.9999704}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1035990272
@@ -1037,8 +1015,8 @@ Rigidbody2D:
   m_GravityScale: 9
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1035990273
 MonoBehaviour:
