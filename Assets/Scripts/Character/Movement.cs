@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     [SerializeField] bool canJump;
     [SerializeField] bool canMoveLeft;
     [SerializeField] bool canMoveRight;
+    [SerializeField] bool isJumping = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +41,12 @@ public class Movement : MonoBehaviour
             }
         }
            
-        if(canJump)
+        if(canJump && isJumping == false)
         {
             if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y<=0.01f)
             {
-                rb.velocity=new Vector2(rb.velocity.x,jumpHeight); 
+                rb.velocity=new Vector2(rb.velocity.x,jumpHeight);
+                isJumping = true; 
             }
         }
     }
@@ -54,5 +56,9 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bounce")
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundForce), ForceMode2D.Impulse);
+        else if(collision.gameObject.tag == "Ground")
+        {
+            isJumping = false; 
+        }
     }
 }

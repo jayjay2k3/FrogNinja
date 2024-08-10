@@ -1037,6 +1037,7 @@ MonoBehaviour:
   canJump: 1
   canMoveLeft: 1
   canMoveRight: 1
+  isJumping: 0
 --- !u!4 &1087278505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 665211565143359480, guid: 749ef22d34fc8354fab765409c98dd52, type: 3}
@@ -1058,7 +1059,7 @@ GameObject:
   - component: {fileID: 1087483970}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

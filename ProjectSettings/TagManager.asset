@@ -9,6 +9,7 @@ TagManager:
   - Gate
   - Bounce
   - player
+  - Ground
   layers:
   - Default
   - TransparentFX
