@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -13,7 +14,7 @@ public class Movement : MonoBehaviour
     [SerializeField] bool canJump;
     [SerializeField] bool canMoveLeft;
     [SerializeField] bool canMoveRight;
-    [SerializeField] bool isJumping = false; 
+    bool isJumping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
        Move();
-       if(horizontal ==0)
+       if(horizontal == 0)
        {
            rb.velocity = new Vector2(0, rb.velocity.y);
        }
@@ -41,12 +42,12 @@ public class Movement : MonoBehaviour
             }
         }
            
-        if(canJump && isJumping == false)
+        if(canJump && rb.velocity.y<=0.01 && rb.velocity.y >=0)
         {
-            if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y<=0.01f)
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 rb.velocity=new Vector2(rb.velocity.x,jumpHeight);
-                isJumping = true; 
+                isJumping = true;
             }
         }
     }
@@ -58,7 +59,7 @@ public class Movement : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundForce), ForceMode2D.Impulse);
         else if(collision.gameObject.tag == "Ground")
         {
-            isJumping = false; 
+            isJumping = false;
         }
     }
 }
