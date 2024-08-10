@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Door : MonoBehaviour
 {
-    Key Key;
+    [SerializeField] Key Key;
     public SpriteRenderer Renderer;
     public Sprite Sprite;
+    private void Start() {
+        Key=GameObject.Find("Key").GetComponent<Key>();
+    }
     private void Update()
     {
         if(Key.unlocked == true)

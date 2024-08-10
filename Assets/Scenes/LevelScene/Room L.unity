@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6339184661016417830, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8349656434495755353, guid: 5baee8fd0a97b6e49b588e2f35560533, type: 3}
       propertyPath: m_RootOrder
@@ -332,11 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6041637503430784142, guid: 9357455f9c029f74bb1d96a82998d21e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: -3.56
       objectReference: {fileID: 0}
     - target: {fileID: 6041637503430784142, guid: 9357455f9c029f74bb1d96a82998d21e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6041637503430784142, guid: 9357455f9c029f74bb1d96a82998d21e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1425,6 +1425,10 @@ PrefabInstance:
     - target: {fileID: 8317817170932047421, guid: 1683f1b77c916604c8987290a82c6062, type: 3}
       propertyPath: m_Name
       value: GateClose
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317817170932047421, guid: 1683f1b77c916604c8987290a82c6062, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1683f1b77c916604c8987290a82c6062, type: 3}

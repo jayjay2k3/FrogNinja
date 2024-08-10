@@ -42,16 +42,17 @@ public class Movement : MonoBehaviour
            
         if(canJump)
         {
-            if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y==0)
+            if(Input.GetKeyDown(KeyCode.Space) && rb.velocity.y<=0.01f)
             {
                 rb.velocity=new Vector2(rb.velocity.x,jumpHeight); 
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Bounce")
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundForce), ForceMode2D.Impulse);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, boundForce), ForceMode2D.Impulse);
     }
 }
